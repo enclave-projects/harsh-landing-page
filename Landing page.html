@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lamborghini | Beyond Speed</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:#0b0b0b;color:#fff;overflow-x:hidden}
+section{position:relative;padding:120px 10%;min-height:100vh}
+h1,h2,h3{font-family:'Orbitron',sans-serif;letter-spacing:2px}
+img{max-width:100%;display:block}
+
+/* Navbar */
+nav{position:fixed;width:100%;top:0;left:0;padding:20px 10%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);z-index:1000}
+nav h2{color:#ffcc00}
+nav ul{display:flex;gap:30px;list-style:none}
+nav ul li a{text-decoration:none;color:#fff;font-weight:500;transition:0.3s}
+nav ul li a:hover{color:#ffcc00}
+
+/* Hero */
+/* Replace hero.jpg with your own image inside an "images" folder */
+.hero{display:flex;align-items:center;justify-content:center;text-align:center;background:url('images/hero.jpg') center/cover fixed no-repeat}
+.hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75)}
+.hero-content{position:relative;z-index:2;max-width:800px}
+.hero h1{font-size:4.5rem;font-weight:900;text-transform:uppercase}
+.hero p{margin-top:20px;font-size:1.2rem;opacity:0.8;line-height:1.6}
+.btn{margin-top:30px;padding:14px 35px;background:#ffcc00;color:#000;font-weight:600;border:none;cursor:pointer;border-radius:40px;transition:0.3s}
+.btn:hover{background:#fff;transform:scale(1.08)}
+
+/* About */
+.about{background:#111;display:flex;align-items:center;gap:60px;flex-wrap:wrap}
+.about-text{flex:1}
+.about-text h2{font-size:2.5rem;margin-bottom:20px;color:#ffcc00}
+.about-text p{opacity:0.8;line-height:1.8}
+.about-img{flex:1}
+
+/* Specs */
+.specs{background:#0f0f0f;text-align:center}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-top:60px}
+.card{background:#1a1a1a;padding:50px;border-radius:25px;transition:0.4s;transform:translateY(60px);opacity:0}
+.card h3{font-size:2rem;color:#ffcc00}
+.card p{margin-top:15px;opacity:0.7}
+.card:hover{transform:translateY(-10px) scale(1.05)}
+
+/* Parallax Showcase */
+/* Replace showcase.jpg with your own image */
+.showcase{background:url('images/showcase.jpg') center/cover fixed no-repeat;text-align:center}
+.showcase::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.65)}
+.showcase-content{position:relative;z-index:2;max-width:800px;margin:auto}
+.showcase h1{font-size:3.5rem;margin-bottom:20px}
+
+/* Gallery */
+.gallery{background:#111;text-align:center}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:50px}
+.gallery-grid img{border-radius:20px;transition:0.4s}
+.gallery-grid img:hover{transform:scale(1.05)}
+
+/* Testimonials */
+.testimonials{background:#0d0d0d;text-align:center}
+.testimonial{max-width:700px;margin:40px auto;opacity:0.8;font-style:italic}
+
+/* Contact */
+.contact{background:#111;text-align:center}
+.contact form{max-width:600px;margin:40px auto;display:flex;flex-direction:column;gap:20px}
+.contact input,.contact textarea{padding:15px;border:none;border-radius:10px;background:#1c1c1c;color:#fff}
+.contact input:focus,.contact textarea:focus{outline:2px solid #ffcc00}
+
+footer{background:#000;text-align:center;padding:40px 10%;opacity:0.6}
+
+/* Reveal Animation */
+.reveal{opacity:0;transform:translateY(60px);transition:all 1s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){
+.hero h1{font-size:3rem}
+.about{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<h2>LAMBORGHINI</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#specs">Specs</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Beyond Speed</h1>
+<p>Where Italian craftsmanship meets relentless performance. Discover a machine engineered for those who dare to dominate the road.</p>
+<button class="btn">Explore Now</button>
+</div>
+</section>
+
+<section class="about reveal" id="about">
+<div class="about-text">
+<h2>The Art of Performance</h2>
+<p>Lamborghini represents innovation, emotion, and unmistakable design.</p>
+<button class="btn">Discover Heritage</button>
+</div>
+<div class="about-img">
+<!-- Replace about.jpg with your own image -->
+<img src="images/about.jpg" alt="Lamborghini">
+</div>
+</section>
+
+<section class="specs" id="specs">
+<h2 class="reveal">Unmatched Performance</h2>
+<div class="spec-grid">
+<div class="card reveal"><h3>0-100 km/h</h3><p>2.8 Seconds</p></div>
+<div class="card reveal"><h3>Top Speed</h3><p>350 km/h</p></div>
+<div class="card reveal"><h3>Engine</h3><p>V12 Naturally Aspirated</p></div>
+<div class="card reveal"><h3>Horsepower</h3><p>770 HP</p></div>
+</div>
+</section>
+
+<section class="showcase">
+<div class="showcase-content reveal">
+<h1>Engineered to Dominate</h1>
+<p>A symphony of power, precision, and passion.</p>
+<button class="btn">Book Test Drive</button>
+</div>
+</section>
+
+<section class="gallery" id="gallery">
+<h2 class="reveal">Gallery</h2>
+<div class="gallery-grid">
+<!-- Replace gallery1.jpg, gallery2.jpg etc. with your own images -->
+<img class="reveal" src="images/gallery1.jpg">
+<img class="reveal" src="images/gallery2.jpg">
+<img class="reveal" src="images/gallery3.jpg">
+<img class="reveal" src="images/gallery4.jpg">
+<img class="reveal" src="images/gallery5.jpg">
+<img class="reveal" src="images/gallery6.jpg">
+<img class="reveal" src="images/gallery7.jpg">
+<img class="reveal" src="images/gallery8.jpg">
+</div>
+</section>
+
+<section class="testimonials">
+<h2 class="reveal">What Drivers Say</h2>
+<p class="testimonial reveal">"Driving a Lamborghini is not transportation — it's an emotion."</p>
+<p class="testimonial reveal">"Every acceleration feels like a rocket launch."</p>
+</section>
+
+<section class="contact" id="contact">
+<h2 class="reveal">Get in Touch</h2>
+<form class="reveal">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button class="btn" type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 Automobili Lamborghini S.p.A. | Designed for Excellence</p>
+</footer>
+
+<script>
+function revealOnScroll(){
+const reveals=document.querySelectorAll('.reveal');
+reveals.forEach(el=>{
+const windowHeight=window.innerHeight;
+const elementTop=el.getBoundingClientRect().top;
+if(elementTop<windowHeight-100){el.classList.add('active');}
+});
+}
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>
